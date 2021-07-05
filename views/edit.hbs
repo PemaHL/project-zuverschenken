@@ -1,0 +1,16 @@
+
+<h2>edit your box</h2>
+{{!--#with moviesInDB--}}
+<form action="/profile/{{boxFromDB._id}}" method="POST">
+	<label for="name">name: </label>
+	<input type="text" id="name" name="name" value="{{boxFromDB.name}}">
+
+	<label for="description">description: </label>
+	<input type="text" id="description" name="description" value="{{boxFromDB.description}}">
+
+	<label for="address">address: </label>
+	<input type="text" id="address" name="address" value="{{boxFromDB.address}}">
+
+    
+	<button type="submit">edit info</button>
+</form>

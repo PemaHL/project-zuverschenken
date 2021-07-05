@@ -56,7 +56,7 @@ router.post("/signup", (req, res, next)=> {
 				User.create({ username: username, password: hash })
 					.then(createdUser => {
 						console.log(createdUser);
-						res.redirect('/form');
+						res.redirect('/login');
 					})
 					.catch(err => {
 						console.log(err);
