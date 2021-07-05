@@ -1,0 +1,36 @@
+<!-- this will be placed in index.hbs in the views -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+	<title>Document</title>
+</head>
+<body>
+	<div id='map' style='width: 1000px; height: 100vh;'></div>
+    <!-- <nav>
+        <a href="/about" id="aboutLink">About</a>
+    </nav> -->
+	<!-- a list of added boxes which will be dynamic (?)-->
+<!-- {{#each boxesList}}
+    <p>{{name}}</p>
+	<p>{{description}}</p>
+	<p>{{location}}</p>
+{{/each}} -->
+	<div id="signUpLogIn">
+		<div id="grad1">
+    	<h2>If you want to <span id="addBox">add a box </span><a href="/signup" id="signUpLink">Sign Up</a> if it's your first time or <a href="/login" id="logInLink"> Log In</a> if you've done it before</h2>
+		</div>
+	</div>
+	<script src="mapbox.js"></script>
+</body>
+</html>

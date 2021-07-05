@@ -1,0 +1,15 @@
+<h2>Edit a box</h2>
+<form action="/profile/{{ box._id }}" method="POST">
+  <label for="name">What's in the box</label>
+  <input id="name" type="text" name="name" value="{{ box.name }}">
+
+  <label for="description">Description</label>
+  <input id="description" type="text" name="description" value="{{ box.description }}">
+
+  <label for="location">Location</label>
+  <input id="location" type="text" name="location" value="{{ box.location }}">
+
+  </select>
+
+  <button type="submit">Update</button>
+</form>
