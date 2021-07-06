@@ -16,20 +16,6 @@ body {
   font-size: 130%;
 }
 
-/* #signUpLogIn {
-  background-color:rgb(146, 144, 142);
-  color: white;
-  padding: 1%;
-  text-align: center 
-} */
-    /* border-radius: 5%; */
-  /* margin-top: 3%;
-  margin-left: 3%;
-  margin-right: 3%; */
-  /* display: flex;
-  flex-direction: row;
-  align-items: flex-start; */
-
   #addBox {
     /* color:rgb(201, 3, 118) */
     color: white
@@ -44,18 +30,33 @@ body {
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
     color: white;
     padding: 1%;
-    text-align: center 
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#mapAndData {
+  display: flex;
+  flex-direction: row;
+}
+
+#dataView {
+  font-size: 1.2rem;
 }
 
 /* Popup container */
 .popup {
-  position: relative;
   display: inline-block;
   cursor: pointer;
+  margin-left: 30px; 
+  position: absolute;
+  color: white;
+  font-size: 1.7rem;
 }
 
 /* The actual popup (appears on top) */
-.popup .popuptext {
+ .popup .popuptext {
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -80,6 +81,7 @@ body {
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
+  /* font-size: 50%; */
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -89,7 +91,7 @@ body {
   animation: fadeIn 1s
 }
 
-/* Add animation (fade in the popup) */
+/* Add animation (fade in the popup) - not working */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -100,19 +102,10 @@ body {
   to {opacity:1 ;}
 }
 
-#mapAndPopup {
-  display: flex;
-  flex-direction: row;
-}
-
-.popup {
-  margin-top: 25px;
-  margin-left: 90px;
-  position: absolute;
-  color: white;
-  font-size: 1.7rem;
-}
-
 .popuptext {
-  font-size: 50%;
+  font-size: 55%;
+}
+
+#bottomText {
+  margin-left: 250px;
 }

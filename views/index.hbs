@@ -1,22 +1,23 @@
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    
+    <div id="mapAndData">
+        <div id='map' style='width: 1000px; height: 100vh;'></div>
+        <div id="dataView">
+            {{#each boxesList}}
+                <p>{{name}}</p>
+	            <p>{{description}}</p>
+	            <p>{{address}}</p>
+            {{/each}} 
+        </div>
+    </div>
 
-<h1>{{title}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
-
-<body>
-	<div id='map' style='width: 1000px; height: 100vh;'></div>
-    <!-- <nav>
-        <a href="/about" id="aboutLink">About</a>
-    </nav> -->
-	<!-- a list of added boxes which will be dynamic (?)-->
-{{#each boxesList}}
-    <p>{{name}}</p>
-	<p>{{description}}</p>
-	<p>{{address}}</p>
-{{/each}} 
-	<div id="signUpLogIn">
-		<div id="grad1">
-    	<h2>If you want to <span id="addBox">add a box </span><a href="/signup" id="signUpLink">Sign Up</a> if it's your first time or <a href="/login" id="logInLink"> Log In</a> if you've done it before</h2>
-		</div>
+	<div id="grad1">
+        <div class="popup" onclick="myFunction()">About
+	        <span class="popuptext" id="myPopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan iaculis nisi sit amet aliquam. Etiam a volutpat dui. Maecenas eget felis sed magna consectetur 
+            convallis sed id sapien. Donec varius massa sit amet nulla facilisis porttitor. Integer aliquam justo id ante condimentum tempor. Vivamus at pharetra risus. Donec tortor dolor, tempus quis dui vehicula, 
+            vehicula fringilla felis. Nunc at.</span>
+        </div>
+    	<h2 id="bottomText">If you want to <span id="addBox">add a box </span><a href="/signup" id="signUpLink">Sign Up</a> if it's your first time or <a href="/login" id="logInLink"> Log In</a> if you've done it before</h2>
 	</div>
+    
+    <script src="/js/mapbox.js"></script>
+    
