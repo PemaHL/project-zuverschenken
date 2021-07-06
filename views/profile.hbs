@@ -1,22 +1,22 @@
 <h1>Restricted Page for Members Only!</h1>
 
 <!--Notes from July 5th, could not show individual box info, so used user instead for testing-->
-{{#each user}}
+{{#with user}}
     <!--a href="/movies/{{_id}}">
         
     </a-->
     {{!--#with boxadded--}}
         <p>{{username}}</p>
+        {{#each boxadded}}
         <p>{{description}}</p>
         <p>{{address}}</p>
         <a href="/profile/{{_id}}/edit">Something not correct? Edit</a>
         <a href="/profile/{{_id}}/delete">Treasure is gone? Delete</a>
-
+        {{/each}}
 <!--ul>
     <li></li>
 </ul-->
+{{/with}}
 
-
-{{/each}}
 
 <a href="/form">Want to add a box?</a>

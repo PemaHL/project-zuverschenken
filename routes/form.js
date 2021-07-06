@@ -32,17 +32,19 @@ router.get('/form', loginCheck(), (req, res, next) => {
   router.post('/form', (req, res, next) => {
 	// console.log(req.body);
 	const { name, description, address } = req.body;
+	const loggedInUser = req.session.user;
 	console.log("creating a box");
+	console.log("checking user ID:", loggedInUser._id);
+	//here use user.findbyId so we know which user is adding the box
 	Box.create({ name, description, address })
-		.then(createdBox => {
-			console.log(`This box has just been added: ${createdBox}`);
-            console.log(`/Box/${createdBox._id}`);
-			res.redirect(`/profile`);
-		})
-        .catch(err => {
-					console.log(err)
-			res.render('form');
-		})
+	.then(createdBox => {
+		User.findByIdAndUpdate(loggedInUser._id, {"$push": {"boxadded": createdBox}}, {new: true})
+		.then(userFound => {
+		console.log(`This box has just been added: ${createdBox}`);
+		console.log(`/Box/${createdBox._id}`);
+		console.log(`Checking if we find a user: ${userFound}`);
+		res.redirect(`/profile`);})
+})
 });
 
 
@@ -98,10 +100,23 @@ router.post('/profile/:id', (req, res, next) => {
 		})
 });
 
+router.get('/profile/:id/delete', (req, res, next) => {
+	const boxId = req.params.id;
+	Box.findById(boxId)
+		.then(boxFromDB => {
+			console.log(boxFromDB);
+			// render a form with the book details
+			res.render('edit', { boxFromDB });
+		})
+		.catch(err => {
+			console.log(err);
+		})
+});
+
 router.post('/profile/:id/delete', (req, res, next) => {
-	console.log(req.params.id);
+	console.log("checking the book id to be deleted:",req.params.id);
 	// delete this box
-	Box.findByIdAndRemove(req.params.id)
+	Box.findByIdAndDelete(req.params.id)
 		.then(() => {
 			// redirect to the user profile section
 			res.redirect(`/profile`);
