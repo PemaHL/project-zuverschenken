@@ -1,12 +1,15 @@
+{{#with user}}
 
-<h1>Welcome {{user.username}} </h1>
+<h1>Welcome {{username}} </h1>
 
 {{#each boxadded}}
+    <p>{{name}}</p>
     <p>{{description}}</p>
     <p>{{address}}</p>
     <a href="/profile/{{_id}}/edit">Something not correct? Edit</a>
     <a href="/profile/{{_id}}/delete">Treasure is gone? Delete</a>
 {{/each}}
+{{/with}}
 
 <a href="/form">Click here to add a box</a>
 

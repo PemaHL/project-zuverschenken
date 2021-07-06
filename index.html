@@ -16,21 +16,18 @@
 	<title>Document</title>
 </head>
 <body>
-	<div id='map' style='width: 1000px; height: 100vh;'></div>
-    <!-- <nav>
-        <a href="/about" id="aboutLink">About</a>
-    </nav> -->
-	<!-- a list of added boxes which will be dynamic (?)-->
-<!-- {{#each boxesList}}
-    <p>{{name}}</p>
-	<p>{{description}}</p>
-	<p>{{location}}</p>
-{{/each}} -->
+	<!-- <div id="mapAndPopup"> -->
+		<div id='map' style='width: 1000px; height: 100vh;'></div>
+	
+		<div class="popup" onclick="myFunction()">About
+		<span class="popuptext" id="myPopup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan iaculis nisi sit amet aliquam. Etiam a volutpat dui. Maecenas eget felis sed magna consectetur convallis sed id sapien. Donec varius massa sit amet nulla facilisis porttitor. Integer aliquam justo id ante condimentum tempor. Vivamus at pharetra risus. Donec tortor dolor, tempus quis dui vehicula, vehicula fringilla felis. Nunc at.</span>
+    	</div>
+		</div>
+	<!-- </div> -->
 	<div id="signUpLogIn">
 		<div id="grad1">
     	<h2>If you want to <span id="addBox">add a box </span><a href="/signup" id="signUpLink">Sign Up</a> if it's your first time or <a href="/login" id="logInLink"> Log In</a> if you've done it before</h2>
 		</div>
-	</div>
 	<script src="mapbox.js"></script>
 </body>
 </html>

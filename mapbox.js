@@ -12,3 +12,9 @@ const map = new mapboxgl.Map({
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-left');
 
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
