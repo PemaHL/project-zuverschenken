@@ -9,8 +9,8 @@ const User = require('../models/User.model');
 router.get("/", (req, res, next) => {
   console.log("testing homepage");
   Box.find()
-      .then(boxInDB => {
-        res.render("index", {boxInDB});
+      .then(boxesList => {
+        res.render("index", {boxesList});
       })
       .catch(err => {
         console.log(err)

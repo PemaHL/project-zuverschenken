@@ -74,10 +74,10 @@ router.get('/form', loginCheck(), (req, res, next) => {
 router.get('/profile/:id/edit', (req, res, next) => {
 	const boxId = req.params.id;
 	Box.findById(boxId)
-		.then(boxFromDB => {
-			console.log(boxFromDB);
+		.then(box => {
+			console.log(box);
 			// render a form with the book details
-			res.render('edit', { boxFromDB });
+			res.render('edit', { box });
 		})
 		.catch(err => {
 			console.log(err);

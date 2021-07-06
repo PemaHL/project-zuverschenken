@@ -23,7 +23,7 @@ router.post("/signup", (req, res, next)=> {
     const { username, password } = req.body;
 	// validation
 	// is the password at least 8 characters - 
-	if (password.length < 8) {
+	if (password.length < 10) {
 		// if not we show the signup form again with a message 
 		res.render('signup', { message: 'Hey there, your password should be at least 8 characters long' });
 		return;
