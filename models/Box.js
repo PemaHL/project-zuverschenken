@@ -9,6 +9,8 @@ const boxSchema = new Schema({
 //this will add createdAt and updatedAt timestamps
 boxSchema.set('timestamps', true);
 
+boxSchema.index({updatedAt: 1}, {expireAfterSeconds: 86400});
+
 const Box = model("Box", boxSchema);
 
 module.exports = Box;
