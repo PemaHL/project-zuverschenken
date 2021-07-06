@@ -100,20 +100,8 @@ router.post('/profile/:id', (req, res, next) => {
 		})
 });
 
-router.get('/profile/:id/delete', (req, res, next) => {
-	const boxId = req.params.id;
-	Box.findById(boxId)
-		.then(boxFromDB => {
-			console.log(boxFromDB);
-			// render a form with the book details
-			res.render('edit', { boxFromDB });
-		})
-		.catch(err => {
-			console.log(err);
-		})
-});
 
-router.post('/profile/:id/delete', (req, res, next) => {
+router.get('/profile/:id/delete', (req, res, next) => {
 	console.log("checking the book id to be deleted:",req.params.id);
 	// delete this box
 	Box.findByIdAndDelete(req.params.id)
