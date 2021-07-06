@@ -1,5 +1,14 @@
 
 <h1>Welcome {{user.username}} </h1>
-<button type="submit">Edit</button>
-<button type="submit">Delete</button>
-<a href="/logout">Log out</a>
+
+{{#each boxadded}}
+    <p>{{description}}</p>
+    <p>{{address}}</p>
+    <a href="/profile/{{_id}}/edit">Something not correct? Edit</a>
+    <a href="/profile/{{_id}}/delete">Treasure is gone? Delete</a>
+{{/each}}
+
+<a href="/form">Click here to add a box</a>
+
+{{!-- logout rout to be added? --}}
+{{!-- <a href="/logout">Log out</a> --}}
