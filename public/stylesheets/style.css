@@ -1,12 +1,118 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font: 14px 'Comfortaa', cursive;
+  background-color: rgb(206, 206, 204);
 }
 
-a {
-  color: #00b7ff;
+#signUpLink {
+  color: rgb(114, 247, 236);
+  text-decoration: none;
+  font-size: 130%;
 }
 
-h1 {
-  color: 15px;
+#logInLink {
+  color: rgb(253, 45, 218);
+  text-decoration: none;
+  font-size: 130%;
+}
+
+/* #signUpLogIn {
+  background-color:rgb(146, 144, 142);
+  color: white;
+  padding: 1%;
+  text-align: center 
+} */
+    /* border-radius: 5%; */
+  /* margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%; */
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start; */
+
+  #addBox {
+    /* color:rgb(201, 3, 118) */
+    color: white
+  }
+
+  #grad1 {
+    height: 50px;
+    background: rgb(90, 90, 90); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+    color: white;
+    padding: 1%;
+    text-align: center 
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+#mapAndPopup {
+  display: flex;
+  flex-direction: row;
+}
+
+.popup {
+  margin-top: 25px;
+  margin-left: 90px;
+  position: absolute;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.popuptext {
+  font-size: 50%;
 }
