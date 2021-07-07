@@ -20,7 +20,7 @@ require("./config")(app);
 
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const DB_URL = 'mongodb+srv://joaska:uhAtoMfOyeF9kFRW@cluster0.l2vqj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const DB_URL = process.env.MONGODB_URI;
 
 app.use(
 	session({
