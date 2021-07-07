@@ -20,7 +20,7 @@ require("./config")(app);
 
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const DB_URL = 'mongodb://localhost/zuverschenken';
+const DB_URL = process.env.MONGODB_URI || 'mongodb://localhost/zuverschenken';
 
 app.use(
 	session({

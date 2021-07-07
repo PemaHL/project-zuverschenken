@@ -1,13 +1,31 @@
-<h2>Add a box</h2>
-<form action="/form" method="POST">
-    <label for="name">What's in the box</label>
-	<input type="text" id="name" name="name" placeholder="e.g. A book">
-
-	<label for="description">Description</label>
-	<input type="text" id="description" name="description" placeholder='e.g. "Homo Deus" written by Yuval Noah Harari, great condition'>
-    
-    <label for="address">Address</label>
-	<input type="text" id="address" name="address">
-
-	<button type="submit">Add this box and share</button>
-</form>
+<div class="signupLoginEditLayout">
+	<div class="row">
+		<h2>Add a box</h2>
+	</div>
+	<div>
+		<form action="/form" method="POST">
+	</div>
+	<div class="row">
+    	<label for="name">What's in the box</label>
+	</div>
+	<div class="row">
+		<input type="text" id="name" name="name" placeholder="e.g. A book" class="input">
+	</div>
+	<div class="row">
+		<label for="description">Description</label>
+	</div>
+	<div class="row">
+		<input type="text" id="description" name="description" placeholder='e.g. "Homo Deus" written by Yuval Noah Harari, great condition' class="descrInput">
+	</div>
+    <div class="row">
+    	<label for="address" >Address</label>
+	</div>
+	<div class="row">
+		<input type="text" id="address" name="address" class="input">
+	</div>
+		<button type="submit" class="button">Add this box and share</button>
+	<div>
+		<a href="/profile" class="links">Go to your profile</a>
+	</div>
+	</form>
+</div>

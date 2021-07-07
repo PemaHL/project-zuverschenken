@@ -1,14 +1,26 @@
-<h1>Already registered? Log in here</h1>
-<form action="/login" method="POST">
-    <label for="username">Username: </label>
-    <input type="text" name="username" id="username">
+<div class="signupLoginEditLayout">
+    <div class="row">
+        <h1>Already registered? Log in here</h1>
+    </div>
+    <div>
+        <form action="/login" method="POST">
+    </div>
+    <div class="row">
+        <label for="username">Username: </label>
+    </div>
+    <div class="row">
+        <input type="text" name="username" id="username" class="input">
+    </div>
+    <div class="row">
+        <label for="password">Password: </label>
+    </div>
+    <div class="row">
+        <input type="password" name="password" id="password" class="input">
+    </div>
+        <button type="submit" class="button">Log in</button>
+    </form>
 
-    <label for="password">Password: </label>
-    <input type="password" name="password" id="password">
-
-    <button type="submit">Log in</button>
-</form>
-
-{{#if message}}
-	<p style="color: red">{{message}}</p>
-{{/if}}
+    {{#if message}}
+	    <p style="color: red">{{message}}</p>
+    {{/if}}
+</div>
