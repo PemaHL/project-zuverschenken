@@ -1,13 +1,29 @@
-<h2>Become a member today!</h2>
-<h1>Signup</h1>
-<form action="/signup" method="POST">
-    <label for="username">Username (contain at least 3 characters): </label>
-    <input type="text" name="username" id="username">
-    <label for="password">Password (contain at least 8 characters): </label>
-    <input type="password" name="password" id="password">
-    <button type="submit">Sign up</button>
-</form>
+<div class="signupLoginEditLayout">
+    <div class="row">
+        <h2>Become a member today!</h2>
+    </div>
+    <div class="row">
+        <h1>Signup</h1>
+    </div>
+    <div>
+    <form action="/signup" method="POST">
+    </div>
+    <div class="row">
+        <label for="username">Username (contain at least 3 characters): </label>
+    </div>
+    <div class="row">
+        <input type="text" name="username" id="username" class="input">
+    </div>
+    <div class="row">
+        <label for="password">Password (contain at least 10 characters): </label>
+    </div>
+    <div class="row">
+        <input type="password" name="password" id="password" class="input">
+    </div>
+        <button type="submit" class="button">Sign up</button>
+    </form>
 
 {{#if message}}
 	<p style="color: red">{{message}}</p>
 {{/if}}
+</div>

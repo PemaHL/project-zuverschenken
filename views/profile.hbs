@@ -1,17 +1,24 @@
-{{#with user}}
+<div id="profileSection">
+    {{#with user}}
 
-<h1>Welcome {{username}} </h1>
+    <h1>Welcome {{username}} </h1>
+    <h2>You can find your boxes here</h2>
+    <div id="box">
+    {{#each boxadded}}
+        <h2>{{name}}</h2>
+        <p>{{description}}</p>
+        <p>{{address}}</p>
+        <div id="editDeletePosition">
+            <a href="/profile/{{_id}}/edit" class="links">Something's not correct? Edit here</a>
+            <a href="/profile/{{_id}}/delete" class="links">Treasure's gone? Delete here</a>
+        </div>
+    {{/each}}
+    {{/with}}
+    </div>
 
-{{#each boxadded}}
-    <p>{{name}}</p>
-    <p>{{description}}</p>
-    <p>{{address}}</p>
-    <a href="/profile/{{_id}}/edit">Something not correct? Edit</a>
-    <a href="/profile/{{_id}}/delete">Treasure is gone? Delete</a>
-{{/each}}
-{{/with}}
+    <a href="/form" class="links">Add a box here</a>
+    <div id="dashboardLink">
+        <a href="/" class="links">Go to the map</a>
+    </div>
+</div>
 
-<a href="/form">Click here to add a box</a>
-
-{{!-- logout rout to be added? --}}
-{{!-- <a href="/logout">Log out</a> --}}
