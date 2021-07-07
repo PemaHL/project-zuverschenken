@@ -1,18 +1,6 @@
-    
-    <script src=“https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js”></script>
-    <div id="mapAndData">
-        <div id='map' style='width: 1000px; height: 100vh;'></div>
-        <div id="dataView">
-            <div id="dataList">
-            {{#each boxesList}}
-                <h2>{{name}}</h2>
-	            <p>{{description}}</p>
-	            <p>{{address}}</p>
-                <hr></hr>
-            {{/each}} 
-            </div>
-        </div>
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
 	<div id="footer">
         <div class="popup" onclick="myFunction()"><h2>About</h2>

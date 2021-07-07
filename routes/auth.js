@@ -25,7 +25,7 @@ router.post("/signup", (req, res, next)=> {
 	// is the password at least 8 characters - 
 	if (password.length < 10) {
 		// if not we show the signup form again with a message 
-		res.render('signup', { message: 'Hey there, your password should be at least 8 characters long' });
+		res.render('signup', { message: 'Hey there, your password should be at least 10 characters long' });
 		return;
 	}
 	// check if the username is empty
@@ -91,5 +91,15 @@ router.post("/login", (req, res, next)=> {
 		})
 });
 
+router.get('/logout', (req, res, next) => {
+	// this logs the user out	
+	req.session.destroy(err => {
+		if (err) {
+			next(err);
+		} else {
+			res.redirect('/');
+		}
+	})
+});
   
   module.exports = router;
