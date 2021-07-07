@@ -51,7 +51,7 @@ body {
     width: 400px;
     overflow-y: scroll;
     height: 670px;
-    background-color: rgb(165, 149, 2);
+    background-color: rgb(161, 66, 153);
     border-radius: 10%;
 }
 
@@ -137,9 +137,7 @@ body {
 #profileSection {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 60px;
-  
+  align-items: center;
 }
 
 .links {
@@ -149,9 +147,9 @@ body {
   color: black;
   margin-top: 30px;
   margin: 10px;
-  background-color: rgb(214, 63, 202);
+  background-color: rgb(161, 66, 153);
   padding: 20px 20px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 #editDeletePosition {
@@ -191,11 +189,14 @@ body {
   font: 14px 'Comfortaa', cursive;
   font-size: 1.5rem;
   border-radius: 10px;
-  background-color: rgb(214, 63, 202);
+  background-color: rgb(161, 66, 153);
   border: none;
 }
 
-/* #box {
-
-} */
+#box {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+}
 
