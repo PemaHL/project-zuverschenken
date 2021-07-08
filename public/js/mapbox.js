@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
 });
 
 let markers = [];
-  axios.get('http://localhost:3000/data')
+  axios.get('https://joy-luck-box.herokuapp.com/data')
           .then(response => {
                console.log("3 checking if axios is reading the object :", response.data.input);
                response.data.input.forEach(address => {
