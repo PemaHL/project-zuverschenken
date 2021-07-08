@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Box = require('../models/Box');
 const User = require('../models/User.model');
-const axios = require('axios');
+// const axios = require('axios');
 
 /* GET home page */
 //the homepage should show all boxes on the map - this need to be added - done
